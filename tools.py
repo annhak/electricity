@@ -4,11 +4,10 @@ import pandas as pd
 import numpy as np
 import requests
 import matplotlib.pyplot as plt
-
+from globals import API_KEY
 
 def get_current_temperature(lat, lon):
-    api_key = '0257a1cf12a35f7d73bb170d144a102e'
-    complete_url = f'https://api.openweathermap.org/data/2.5/forecast?lat={lat}&lon={lon}&appid={api_key}&units=metric'
+    complete_url = f'https://api.openweathermap.org/data/2.5/forecast?lat={lat}&lon={lon}&appid={API_KEY}&units=metric'
 
     # Sending request to the URL
     response = requests.get(complete_url)
